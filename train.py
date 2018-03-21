@@ -19,7 +19,8 @@ torch.cuda.set_device(args.gpu)
 inputs = data.Field(lower=args.lower)
 answers = data.Field(sequential=False)
 
-train, dev, test = datasets.SNLI.splits(inputs, answers)
+train, dev, test = datasets.SNLI.splits(
+        inputs, answers, root=args.data_root)
 
 inputs.build_vocab(train, dev, test)
 if args.word_vectors:
