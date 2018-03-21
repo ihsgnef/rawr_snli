@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/*
+results/*
+.data/*
+.vector_cache/*
+.ipynb_checkpoints/*
